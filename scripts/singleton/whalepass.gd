@@ -85,13 +85,10 @@ func enroll() -> bool:
 	enrolled.emit()
 	return true
 
+var _link := ""
 func get_redirect_link() -> String:
-	return Config.read_config("whalepass", "redirectionLink", "") as String
+	return _link
 func redirect_link() -> String:
-	var link := get_redirect_link()
-	if link != "":
-		link_received.emit()
-		return link
 	var resp := RedirectLinkResp.new()
 	var success := rest_call.rest_call(
 		"https://api.whalepass.gg/players/%s/redirect?gameId=%s" % [get_or_create_player_id(), game_id],
@@ -104,7 +101,7 @@ func redirect_link() -> String:
 	
 	if rest_call._obj == null:
 		return ""
-	Config.save_config("whalepass", "redirectionLink", resp.redirectionLink)
+	_link = resp.redirectionLink
 	link_received.emit()
 	return resp.redirectionLink
 

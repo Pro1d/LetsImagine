@@ -151,6 +151,8 @@ colors = PackedColorArray(1, 0.358333, 0.23, 1, 1, 0.622833, 0.27, 1, 1, 1, 1, 0
 [node name="PlayerPlane" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 129
+motion_mode = 1
+wall_min_slide_angle = 0.0872665
 script = ExtResource("1_mrkph")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -104,10 +104,15 @@ func _physics_process(delta: float) -> void:
 		Input.get_axis("player_left", "player_right"),
 		Input.get_axis("player_up", "player_down"),
 	)
+	if not command.is_zero_approx():
+		command = command.normalized()
 	_current_velocity = _current_velocity.move_toward(command * speed, delta * _acceleration)
-	var collision := move_and_collide(_current_velocity * delta)
-	if collision != null:
-		_current_velocity = _current_velocity.slide(collision.get_normal())
+	velocity = _current_velocity
+	move_and_slide()
+	_current_velocity = velocity
+	#var collision := move_and_collide(_current_velocity * delta)
+	#if collision != null:
+		#_current_velocity = _current_velocity.slide(collision.get_normal())
 
 func add_weapon(weapon: Weapon) -> void:
 	var index := weapon.index

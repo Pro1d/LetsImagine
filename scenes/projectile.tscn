@@ -211,5 +211,5 @@ scale_curve_y = SubResource("Curve_308be")
 [node name="ExplodeAnimationPlayer" type="AnimationPlayer" parent="ExplodeCircle"]
 unique_name_in_owner = true
 libraries = {
-"": SubResource("AnimationLibrary_b1aew")
+&"": SubResource("AnimationLibrary_b1aew")
 }

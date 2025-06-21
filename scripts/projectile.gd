@@ -104,6 +104,9 @@ func _move_by(motion: Vector2, reccursive: int = 3) -> void:
 			if body.is_in_group("world_boundary"):
 				current_velocity = current_velocity.bounce(N)
 				_on_body_hit(body)
+				for e in get_collision_exceptions():
+					if e != null:
+						remove_collision_exception_with(e)
 			else:
 				current_velocity = current_velocity.length() * N.rotated(
 					(randf() * 2 * PI)
@@ -111,6 +114,9 @@ func _move_by(motion: Vector2, reccursive: int = 3) -> void:
 					clampf(randfn(0, PI/6), -PI/2*.9, PI/2*.9)
 				)
 				if piercing:
+					for e in get_collision_exceptions():
+						if e != null:
+							remove_collision_exception_with(e)
 					add_collision_exception_with(body)
 				_on_body_hit(body)
 			bounce_left -= 1

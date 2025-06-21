@@ -182,7 +182,8 @@ _data = {
 [sub_resource type="Environment" id="Environment_afcjq"]
 ambient_light_source = 2
 ambient_light_color = Color(1, 0.974208, 0.942083, 1)
-ambient_light_energy = 0.25
+ambient_light_energy = 0.3
+tonemap_mode = 3
 
 [sub_resource type="Animation" id="Animation_dgxy6"]
 length = 0.001
@@ -537,7 +538,7 @@ round_precision = 4
 [node name="IntroAnimationPlayer" type="AnimationPlayer" parent="BlackScreen"]
 unique_name_in_owner = true
 libraries = {
-"": SubResource("AnimationLibrary_d4yry")
+&"": SubResource("AnimationLibrary_d4yry")
 }
 
 [node name="HUD" type="CanvasLayer" parent="."]
@@ -572,13 +573,13 @@ fov = 40.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="3D"]
 transform = Transform3D(0.997198, -6.28367e-08, -0.0748046, 0.0739851, 0.14762, 0.986273, 0.0110426, -0.989044, 0.147206, 0, 0, 0)
-light_energy = 0.6
+light_energy = 0.3
 shadow_enabled = true
 shadow_normal_bias = 3.985
-shadow_opacity = 0.55
-directional_shadow_mode = 1
-directional_shadow_max_distance = 1.7
-directional_shadow_pancake_size = 10.0
+shadow_opacity = 0.7
+directional_shadow_mode = 0
+directional_shadow_fade_start = 1.0
+directional_shadow_max_distance = 2.0
 sky_mode = 1
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="3D/DirectionalLight3D"]
@@ -738,7 +739,7 @@ transform = Transform3D(0.79214, 0.610339, 1.8887e-08, -0.49895, 0.647572, -0.57
 [node name="MenuAnimationPlayer" type="AnimationPlayer" parent="3D"]
 unique_name_in_owner = true
 libraries = {
-"": SubResource("AnimationLibrary_8e7wf")
+&"": SubResource("AnimationLibrary_8e7wf")
 }
 
 [node name="2D" type="Node2D" parent="." node_paths=PackedStringArray("overlay", "weapon_overlay", "score_overlay")]

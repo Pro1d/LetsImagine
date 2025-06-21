@@ -7,8 +7,8 @@ flip_faces = true
 size = Vector3(3.225, 2.1, 2.955)
 
 [sub_resource type="Gradient" id="Gradient_iy2ek"]
-offsets = PackedFloat32Array(0, 0.192118)
-colors = PackedColorArray(0.600937, 0.600937, 0.600937, 1, 1, 1, 1, 1)
+offsets = PackedFloat32Array(0, 0.160839)
+colors = PackedColorArray(0.929715, 0.929715, 0.929715, 1, 1, 1, 1, 1)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_gbg6u"]
 frequency = 1.0
@@ -21,15 +21,15 @@ color_ramp = SubResource("Gradient_iy2ek")
 noise = SubResource("FastNoiseLite_gbg6u")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kbnis"]
-albedo_color = Color(0.507619, 0.701806, 0.772318, 1)
+albedo_color = Color(0.3542, 0.65912, 0.77, 1)
 albedo_texture = SubResource("NoiseTexture2D_oa0t7")
-uv1_scale = Vector3(50, 50, 50)
+uv1_scale = Vector3(20, 20, 20)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_j4rot"]
 size = Vector2(3.41, 3.32)
 
 [sub_resource type="Gradient" id="Gradient_w6sw4"]
-colors = PackedColorArray(0.295566, 0.295566, 0.295566, 1, 1, 1, 1, 1)
+colors = PackedColorArray(0.703808, 0.703808, 0.703808, 1, 1, 1, 1, 1)
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_hivua"]
 width = 128
@@ -38,7 +38,7 @@ color_ramp = SubResource("Gradient_w6sw4")
 noise = SubResource("FastNoiseLite_gbg6u")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q23og"]
-albedo_color = Color(0.0658237, 0.210377, 0.288417, 1)
+albedo_color = Color(0.129006, 0.389843, 0.530879, 1)
 albedo_texture = SubResource("NoiseTexture2D_hivua")
 uv1_scale = Vector3(40, 40, 40)
 

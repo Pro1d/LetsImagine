@@ -102,12 +102,12 @@ func get_level_from_xp(_xp: int = -1) -> Exp:
 	
 	return e
 
-func update_inventory(item_names: Array[String]) -> void:
-	# TODO also remove plane
-	for n in item_names:
-		n = n.to_lower()
-		for k: String in plane_type_by_reward_name.keys():
-			if n.contains(k):
-				available_planes[plane_type_by_reward_name[k] as int] = true
-				break
+func give_xp(_xp: int) -> void:
+	xp += _xp
+	update_inventory()
+
+func update_inventory() -> void:
+	var e := get_level_from_xp()
+	for p in range(available_planes.size()):
+		available_planes[p] = (e.level >= unlock_level_planes[p])
 	save_available_planes()

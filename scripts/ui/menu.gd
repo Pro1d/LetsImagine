@@ -8,38 +8,41 @@ var plane_index := 0
 @onready var display_xp := Config.xp
 var tween_xp : Tween
 
+@onready var _player_level_label := %PlayerLevelLabel as Label
+@onready var _xp_label := %XpLabel as Label
+@onready var _xp_progress_bar := %XpProgressBar as ProgressBar
+@onready var _play_button := %PlayButton as Button
+@onready var _plane_label := %PlaneLabel as Label
+
 func _ready() -> void:
 	_display_level_progression(display_xp)
 	_display_plane()
 	
 	(%PrevPlaneButton as Button).pressed.connect(_on_change_plane_pressed.bind(-1))
 	(%NextPlaneButton as Button).pressed.connect(_on_change_plane_pressed.bind(+1))
-	(%PlayButton as Button).pressed.connect(play_clicked.emit)
-	WhalepassSingleton.progress_updated.connect(_on_progress_updated)
-	WhalepassSingleton.inventory_updated.connect(_on_inventory_updated)
+	_play_button.pressed.connect(play_clicked.emit)
 	
 	visibility_changed.connect(func() -> void:
-		if visible: WhalepassSingleton.trigger_update()
+		if visible: _update()
 	)
-	WhalepassSingleton.trigger_update()
+	_update()
 
-func _on_progress_updated() -> void:
+func _update() -> void:
 	if tween_xp != null:
 		tween_xp.kill()
 	tween_xp = create_tween()
 	tween_xp.tween_method(_display_level_progression, display_xp, Config.xp, 2.0) \
 		.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
-
-func _on_inventory_updated() -> void:
+		
 	_display_plane()
 
 func _display_level_progression(xp: int) -> void:
 	display_xp = xp
 	var e := Config.get_level_from_xp(display_xp)
-	(%PlayerLevelLabel as Label).text = "Level %d" % [e.level] + (" (max)" if e.level == Config.Exp.max_level else "")
-	(%XpLabel as Label).text = "Next Level: %d/%d exp" % [e.xp, e.xp_next_level]
-	(%XpProgressBar as ProgressBar).value = e.xp
-	(%XpProgressBar as ProgressBar).max_value = e.xp_next_level
+	_player_level_label.text = "Level %d" % [e.level] + (" (max)" if e.level == Config.Exp.max_level else "")
+	_xp_label.text = "Next Level: %d/%d exp" % [e.xp, e.xp_next_level]
+	_xp_progress_bar.value = e.xp
+	_xp_progress_bar.max_value = e.xp_next_level
 
 func _on_change_plane_pressed(i: int) -> void:
 	var planes_count := Config.available_planes.size()
@@ -49,11 +52,11 @@ func _on_change_plane_pressed(i: int) -> void:
 func _display_plane() -> void:
 	var type := plane_index as PlayerPlane.Type
 	if Config.available_planes[plane_index]:
-		(%PlaneLabel as Label).text = PlayerPlane.display_description(type)
+		_plane_label.text = PlayerPlane.display_description(type)
 	else:
-		(%PlaneLabel as Label).text = (
+		_plane_label.text = (
 			PlayerPlane.display_description(type).split("\n")[0] +
 			"\nUnlocked at level %d" % [Config.unlock_level_planes[type]]
 		)
 	Config.player_node.type = type
-	(%PlayButton as Button).disabled = not Config.available_planes[plane_index]
+	_play_button.disabled = not Config.available_planes[plane_index]

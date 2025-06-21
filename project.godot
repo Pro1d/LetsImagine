@@ -14,6 +14,7 @@ config/name="Where Dreams Take Flight"
 config/description="From reality to imaginary, go in kid's thoughts and join the most epic dogfight we could imagine."
 run/main_scene="res://scenes/world_2d_and_3d.tscn"
 config/features=PackedStringArray("4.4", "GL Compatibility")
+run/max_fps=60
 config/icon="res://icon.svg"
 
 [audio]
@@ -23,7 +24,6 @@ buses/default_bus_layout="res://resources/audio/default_bus_layout.tres"
 [autoload]
 
 Config="*res://scripts/singleton/Config.gd"
-WhalepassSingleton="*res://scripts/singleton/whalepass.gd"
 MusicManager="*res://scripts/singleton/MusicManager.gd"
 VoiceManagerSingleton="*res://scenes/singleton/VoiceManager.tscn"
 SoundFxManagerSingleton="*res://scripts/singleton/SoundFxManager.gd"

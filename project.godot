@@ -13,7 +13,7 @@ config_version=5
 config/name="Where Dreams Take Flight"
 config/description="From reality to imaginary, go in kid's thoughts and join the most epic dogfight we could imagine."
 run/main_scene="res://scenes/world_2d_and_3d.tscn"
-config/features=PackedStringArray("4.3", "GL Compatibility")
+config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [audio]

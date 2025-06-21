@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dgyerctl1ayny"]
 
-[ext_resource type="Script" path="res://scripts/singleton/voice_manager.gd" id="1_cxvrp"]
+[ext_resource type="Script" uid="uid://c5lrevranyut5" path="res://scripts/singleton/voice_manager.gd" id="1_cxvrp"]
 [ext_resource type="AudioStream" uid="uid://brb1xlwi3b3du" path="res://resources/audio/voices/damage.tres" id="2_88a15"]
 
 [node name="VoiceManager" type="Node"]

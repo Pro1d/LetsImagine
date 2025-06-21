@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="WeaponSpec" load_steps=3 format=3 uid="uid://cru4xcly1jymk"]
 
 [ext_resource type="ArrayMesh" uid="uid://c6v86jv72034q" path="res://assets/models/all/MagnetStick.res" id="1_470sy"]
-[ext_resource type="Script" path="res://scripts/weapon_spec.gd" id="1_jtvty"]
+[ext_resource type="Script" uid="uid://8ky1ixwpj3oo" path="res://scripts/weapon_spec.gd" id="1_jtvty"]
 
 [resource]
 script = ExtResource("1_jtvty")
@@ -19,3 +19,4 @@ seeking = true
 proj_shape = 2
 proj_color = Color(0.63, 1, 0.790333, 1)
 mesh = ExtResource("1_470sy")
+bonus_bouncing = 0

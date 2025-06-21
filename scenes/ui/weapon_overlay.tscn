@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://7ndbh0djb8di"]
 
-[ext_resource type="Script" path="res://scripts/ui/weapon_overlay.gd" id="1_fj7y0"]
+[ext_resource type="Script" uid="uid://birv6rpcr4o00" path="res://scripts/ui/weapon_overlay.gd" id="1_fj7y0"]
 [ext_resource type="LabelSettings" uid="uid://cpdhvt73q0p3u" path="res://resources/themes/border_label.tres" id="2_kr4aq"]
 [ext_resource type="Texture2D" uid="uid://cjdyi8gh5fv0p" path="res://assets/textures/border_handdrawn_arrows.png" id="3_akamo"]
 

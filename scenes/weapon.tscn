@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://cske0mslikh06"]
 
-[ext_resource type="Script" path="res://scripts/weapon.gd" id="1_cbk60"]
+[ext_resource type="Script" uid="uid://dpylcw3lohh6y" path="res://scripts/weapon.gd" id="1_cbk60"]
 [ext_resource type="Resource" uid="uid://xvr65sttso2t" path="res://resources/weapons/doll_fork.tres" id="2_04f7h"]
-[ext_resource type="Script" path="res://scripts/utils/remote_transform_3d_to_2d.gd" id="8_xei33"]
+[ext_resource type="Script" uid="uid://bol5ixj8jcjqm" path="res://scripts/utils/remote_transform_3d_to_2d.gd" id="8_xei33"]
 
 [node name="Weapon" type="Node"]
 process_mode = 1

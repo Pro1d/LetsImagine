@@ -1,6 +1,6 @@
 [gd_scene load_steps=19 format=3 uid="uid://c3cgew3up283b"]
 
-[ext_resource type="Script" path="res://scripts/attack_wave.gd" id="1_xv26w"]
+[ext_resource type="Script" uid="uid://bjttt10kwjr1c" path="res://scripts/attack_wave.gd" id="1_xv26w"]
 
 [sub_resource type="Curve2D" id="Curve2D_d1hhl"]
 _data = {

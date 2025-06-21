@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bkgmgjhdcppcw"]
 
-[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_culg7"]
-[ext_resource type="Script" path="res://scripts/utils/remote_transform_2d_to_3d.gd" id="1_lfsxq"]
+[ext_resource type="Script" uid="uid://6eo31kantek7" path="res://scripts/enemy.gd" id="1_culg7"]
+[ext_resource type="Script" uid="uid://maiik1q7hx7r" path="res://scripts/utils/remote_transform_2d_to_3d.gd" id="1_lfsxq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kcnqa"]
 resource_local_to_scene = true

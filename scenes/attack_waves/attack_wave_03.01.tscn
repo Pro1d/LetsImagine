@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c3cgew3up283b" path="res://scenes/attack_wave.tscn" id="1_7adi4"]
 [ext_resource type="PackedScene" uid="uid://ptyf7vrsn81p" path="res://scenes/enemies/spinning.tscn" id="2_571o8"]
 [ext_resource type="PackedScene" uid="uid://imuct0ptm7lp" path="res://scenes/enemies/WarPlane.tscn" id="2_gh1m7"]
-[ext_resource type="Script" path="res://scripts/attack_waves/path_follow_with_offset.gd" id="2_iuwcy"]
+[ext_resource type="Script" uid="uid://g7beatrd0xr3" path="res://scripts/attack_waves/path_follow_with_offset.gd" id="2_iuwcy"]
 
 [sub_resource type="Curve2D" id="Curve2D_xpcee"]
 _data = {

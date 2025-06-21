@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://d2w37k46f2mhw"]
 
-[ext_resource type="Script" path="res://scripts/projectile.gd" id="1_flhb0"]
+[ext_resource type="Script" uid="uid://dwnu5r1xjetxu" path="res://scripts/projectile.gd" id="1_flhb0"]
 [ext_resource type="Curve" uid="uid://cpevpiqn8vjbo" path="res://resources/materials/curve_width_4.tres" id="2_wm83e"]
 [ext_resource type="Texture2D" uid="uid://da0uv6a1fj1w8" path="res://resources/materials/line_texture.tres" id="3_36d25"]
 
@@ -77,8 +77,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_b1aew"]
 _data = {
-"RESET": SubResource("Animation_ojb0u"),
-"explode": SubResource("Animation_kc2vf")
+&"RESET": SubResource("Animation_ojb0u"),
+&"explode": SubResource("Animation_kc2vf")
 }
 
 [node name="Projectile" type="CharacterBody2D" groups=["unique_to_game"]]

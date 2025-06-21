@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bkgmgjhdcppcw" path="res://scenes/enemy.tscn" id="1_0kl6d"]
 [ext_resource type="ArrayMesh" uid="uid://d31j0xjonn8xe" path="res://assets/models/all/Teddy.res" id="2_e10qk"]
-[ext_resource type="Script" path="res://scripts/enemies/teddy.gd" id="2_pdljp"]
+[ext_resource type="Script" uid="uid://gxvt37ik40ve" path="res://scripts/enemies/teddy.gd" id="2_pdljp"]
 [ext_resource type="Texture2D" uid="uid://da0uv6a1fj1w8" path="res://resources/materials/line_texture.tres" id="4_2go6x"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vmucy"]

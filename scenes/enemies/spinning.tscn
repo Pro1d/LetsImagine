@@ -62,8 +62,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_j4211"]
 _data = {
-"RESET": SubResource("Animation_ryg46"),
-"flying": SubResource("Animation_8xqnh")
+&"RESET": SubResource("Animation_ryg46"),
+&"flying": SubResource("Animation_8xqnh")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mhd34"]
@@ -131,8 +131,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xinvj"]
 _data = {
-"RESET": SubResource("Animation_ip61j"),
-"flying": SubResource("Animation_xq7d1")
+&"RESET": SubResource("Animation_ip61j"),
+&"flying": SubResource("Animation_xq7d1")
 }
 
 [node name="Spinning" instance=ExtResource("1_vu328")]

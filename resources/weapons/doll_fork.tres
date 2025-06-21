@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="WeaponSpec" load_steps=3 format=3 uid="uid://xvr65sttso2t"]
 
 [ext_resource type="ArrayMesh" uid="uid://owoev2f1ihim" path="res://assets/models/all/DollFork.res" id="1_inovb"]
-[ext_resource type="Script" path="res://scripts/weapon_spec.gd" id="2_8kig7"]
+[ext_resource type="Script" uid="uid://8ky1ixwpj3oo" path="res://scripts/weapon_spec.gd" id="2_8kig7"]
 
 [resource]
 script = ExtResource("2_8kig7")
@@ -19,3 +19,4 @@ seeking = false
 proj_shape = 0
 proj_color = Color(1, 0.62, 0.62, 1)
 mesh = ExtResource("1_inovb")
+bonus_bouncing = 0

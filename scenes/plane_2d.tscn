@@ -1,8 +1,8 @@
 [gd_scene load_steps=17 format=3 uid="uid://dfoaaqydn6rhb"]
 
-[ext_resource type="Script" path="res://scripts/plane_2d.gd" id="1_mrkph"]
+[ext_resource type="Script" uid="uid://ch5mq8chypemc" path="res://scripts/plane_2d.gd" id="1_mrkph"]
 [ext_resource type="ArrayMesh" uid="uid://dry3um5mv3hvb" path="res://assets/models/all/Plane.res" id="2_kahex"]
-[ext_resource type="Script" path="res://scripts/utils/remote_transform_2d_to_3d.gd" id="2_obrjo"]
+[ext_resource type="Script" uid="uid://maiik1q7hx7r" path="res://scripts/utils/remote_transform_2d_to_3d.gd" id="2_obrjo"]
 [ext_resource type="Texture2D" uid="uid://d3tfswasqdd0p" path="res://assets/textures/particle_cloud.png" id="3_44k8h"]
 [ext_resource type="Texture2D" uid="uid://da0uv6a1fj1w8" path="res://resources/materials/line_texture.tres" id="7_2k32o"]
 
@@ -126,8 +126,8 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_m7d3t"]
 _data = {
-"RESET": SubResource("Animation_m6l2k"),
-"shielding": SubResource("Animation_6fpnw")
+&"RESET": SubResource("Animation_m6l2k"),
+&"shielding": SubResource("Animation_6fpnw")
 }
 
 [sub_resource type="Curve" id="Curve_4cbrd"]

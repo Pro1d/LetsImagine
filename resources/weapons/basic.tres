@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="WeaponSpec" load_steps=3 format=3 uid="uid://bqbw1ds8pynas"]
 
 [ext_resource type="ArrayMesh" uid="uid://d1hlba5bhqx8i" path="res://assets/models/all/Canon.res" id="1_3eu8s"]
-[ext_resource type="Script" path="res://scripts/weapon_spec.gd" id="2_0jed6"]
+[ext_resource type="Script" uid="uid://8ky1ixwpj3oo" path="res://scripts/weapon_spec.gd" id="2_0jed6"]
 
 [resource]
 script = ExtResource("2_0jed6")
@@ -19,3 +19,4 @@ seeking = false
 proj_shape = 0
 proj_color = Color(0.68, 0.68, 0.68, 1)
 mesh = ExtResource("1_3eu8s")
+bonus_bouncing = 0

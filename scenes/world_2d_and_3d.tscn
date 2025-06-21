@@ -1,6 +1,6 @@
 [gd_scene load_steps=41 format=3 uid="uid://do4q1xtyjh4u1"]
 
-[ext_resource type="Script" path="res://scripts/world_2d_and_3d.gd" id="1_xm0yb"]
+[ext_resource type="Script" uid="uid://byep6a0nkciy" path="res://scripts/world_2d_and_3d.gd" id="1_xm0yb"]
 [ext_resource type="Texture2D" uid="uid://da0uv6a1fj1w8" path="res://resources/materials/line_texture.tres" id="2_2l4cb"]
 [ext_resource type="Curve" uid="uid://cpevpiqn8vjbo" path="res://resources/materials/curve_width_4.tres" id="2_nno2c"]
 [ext_resource type="Resource" uid="uid://b4cxfnq2h8wjw" path="res://resources/weapons/rubber_duck.tres" id="3_a6i1r"]
@@ -18,11 +18,11 @@
 [ext_resource type="ArrayMesh" uid="uid://itvw88q41qwc" path="res://assets/models/all/Pen.res" id="13_5pkug"]
 [ext_resource type="ArrayMesh" uid="uid://dukq88q3a01m4" path="res://assets/models/all/Train.res" id="14_hmmik"]
 [ext_resource type="PackedScene" uid="uid://ctqhhr4rs0bx7" path="res://assets/models/arm_left.glb" id="24_ojakt"]
-[ext_resource type="Script" path="res://scripts/arm.gd" id="25_qyknq"]
+[ext_resource type="Script" uid="uid://vmy4ul85p2ou" path="res://scripts/arm.gd" id="25_qyknq"]
 [ext_resource type="PackedScene" uid="uid://cpu38imynhxd6" path="res://assets/models/arm_right.glb" id="25_y71a1"]
-[ext_resource type="Script" path="res://scripts/game_2d.gd" id="26_ikt7f"]
+[ext_resource type="Script" uid="uid://bg2owhqmr7gpp" path="res://scripts/game_2d.gd" id="26_ikt7f"]
 [ext_resource type="PackedScene" uid="uid://dfoaaqydn6rhb" path="res://scenes/plane_2d.tscn" id="29_tqvap"]
-[ext_resource type="Script" path="res://scripts/weapon_spec.gd" id="35_ubv56"]
+[ext_resource type="Script" uid="uid://8ky1ixwpj3oo" path="res://scripts/weapon_spec.gd" id="35_ubv56"]
 [ext_resource type="Resource" uid="uid://xvr65sttso2t" path="res://resources/weapons/doll_fork.tres" id="36_uls65"]
 [ext_resource type="Resource" uid="uid://p5p3rlli25ko" path="res://resources/weapons/lego.tres" id="37_x01gp"]
 [ext_resource type="Resource" uid="uid://0a6c26hv0xqb" path="res://resources/weapons/pen.tres" id="39_0aimb"]
@@ -31,6 +31,69 @@
 [sub_resource type="Curve" id="Curve_xobmk"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.188192, 0.871775), 0.0, 0.0, 0, 0, Vector2(0.420664, 1), 0.0, 0.0, 0, 0, Vector2(0.697417, 0.753414), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 5
+
+[sub_resource type="Animation" id="Animation_el85y"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("%Black:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("%PlayerPlane/3D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.12, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("%PlayerPlane/3D:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("%Black/title:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_72j8s"]
 resource_name = "intro"
@@ -110,73 +173,10 @@ tracks/5/keys = {
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_el85y"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("%Black:color")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 0, 1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("%PlayerPlane/3D:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0.12, 0)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("%PlayerPlane/3D:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("%Black/title:modulate")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_d4yry"]
 _data = {
-"RESET": SubResource("Animation_el85y"),
-"intro": SubResource("Animation_72j8s")
+&"RESET": SubResource("Animation_el85y"),
+&"intro": SubResource("Animation_72j8s")
 }
 
 [sub_resource type="Environment" id="Environment_afcjq"]
@@ -216,8 +216,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8e7wf"]
 _data = {
-"RESET": SubResource("Animation_dgxy6"),
-"game_to_menu": SubResource("Animation_3qtkc")
+&"RESET": SubResource("Animation_dgxy6"),
+&"game_to_menu": SubResource("Animation_3qtkc")
 }
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_m5blm"]

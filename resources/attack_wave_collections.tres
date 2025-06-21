@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://du62rpn1bsdkv" path="res://scenes/attack_waves/attack_wave_B01.tscn" id="1_8upp0"]
 [ext_resource type="PackedScene" uid="uid://088brukj5isd" path="res://scenes/attack_waves/attack_wave_00.01.tscn" id="1_q42ba"]
-[ext_resource type="Script" path="res://scripts/attack_waves/attack_wave_collection.gd" id="1_tl2wf"]
+[ext_resource type="Script" uid="uid://c2yinkhxegtsm" path="res://scripts/attack_waves/attack_wave_collection.gd" id="1_tl2wf"]
 [ext_resource type="PackedScene" uid="uid://cqc704316fgog" path="res://scenes/attack_waves/attack_wave_B02.tscn" id="2_i1ybu"]
 [ext_resource type="PackedScene" uid="uid://b1hfgblyxoyaa" path="res://scenes/attack_waves/attack_wave_01.00.tscn" id="3_3casg"]
 [ext_resource type="PackedScene" uid="uid://cvfbmawame7tk" path="res://scenes/attack_waves/attack_wave_01.02.tscn" id="4_7bcos"]

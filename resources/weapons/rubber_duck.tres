@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="WeaponSpec" load_steps=3 format=3 uid="uid://b4cxfnq2h8wjw"]
 
 [ext_resource type="ArrayMesh" uid="uid://cyhpywkfjhr23" path="res://assets/models/all/RubberDuck.res" id="1_vrr6k"]
-[ext_resource type="Script" path="res://scripts/weapon_spec.gd" id="2_0f0rq"]
+[ext_resource type="Script" uid="uid://8ky1ixwpj3oo" path="res://scripts/weapon_spec.gd" id="2_0f0rq"]
 
 [resource]
 script = ExtResource("2_0f0rq")
@@ -19,3 +19,4 @@ seeking = false
 proj_shape = 0
 proj_color = Color(1, 0.986, 0.72, 1)
 mesh = ExtResource("1_vrr6k")
+bonus_bouncing = 0

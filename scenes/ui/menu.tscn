@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://chckwtnrrluej"]
 
-[ext_resource type="Script" path="res://scripts/ui/menu.gd" id="1_qn871"]
+[ext_resource type="Script" uid="uid://vi3e265x87r7" path="res://scripts/ui/menu.gd" id="1_qn871"]
 [ext_resource type="LabelSettings" uid="uid://cpdhvt73q0p3u" path="res://resources/themes/border_label.tres" id="2_5nk5s"]
 
 [node name="Menu" type="Control"]
@@ -64,14 +64,6 @@ layout_mode = 2
 text = "Level 5 (max)"
 label_settings = ExtResource("2_5nk5s")
 horizontal_alignment = 1
-
-[node name="VisitButton" type="Button" parent="VBoxContainer/WhalepassTopBar"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 0
-tooltip_text = "Link your account, claim your rewards."
-text = "Visit discover.games"
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
 layout_mode = 2

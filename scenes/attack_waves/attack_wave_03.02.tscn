@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://drp6vfe2y5lkc"]
 
 [ext_resource type="PackedScene" uid="uid://c3cgew3up283b" path="res://scenes/attack_wave.tscn" id="1_rnfde"]
-[ext_resource type="Script" path="res://scripts/attack_waves/path_follow_with_offset.gd" id="2_2b0pl"]
+[ext_resource type="Script" uid="uid://g7beatrd0xr3" path="res://scripts/attack_waves/path_follow_with_offset.gd" id="2_2b0pl"]
 [ext_resource type="PackedScene" uid="uid://imuct0ptm7lp" path="res://scenes/enemies/WarPlane.tscn" id="3_k4wv6"]
 
 [sub_resource type="Curve2D" id="Curve2D_bkehl"]

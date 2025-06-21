@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://v2ddeufj10c2"]
 
-[ext_resource type="Script" path="res://scripts/ui/overlay.gd" id="1_6m3lx"]
+[ext_resource type="Script" uid="uid://bxepdrlfcliax" path="res://scripts/ui/overlay.gd" id="1_6m3lx"]
 [ext_resource type="StyleBox" uid="uid://dajyo5jyntuc3" path="res://resources/themes/life_full.tres" id="2_k2jth"]
 [ext_resource type="StyleBox" uid="uid://d3trss7eq2wc7" path="res://resources/themes/life_empty.tres" id="3_qpqgs"]
 

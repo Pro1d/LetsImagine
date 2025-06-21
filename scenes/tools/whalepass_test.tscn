@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ccgxeob1ib7mf"]
 
-[ext_resource type="Script" path="res://scripts/tools/whalepass_test.gd" id="1_hhm6e"]
+[ext_resource type="Script" uid="uid://biv81v231xtwe" path="res://scripts/tools/whalepass_test.gd" id="1_hhm6e"]
 
 [node name="WhalepassTest" type="Control"]
 layout_mode = 3

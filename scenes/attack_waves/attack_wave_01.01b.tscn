@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c3cgew3up283b" path="res://scenes/attack_wave.tscn" id="1_bnu1m"]
 [ext_resource type="PackedScene" uid="uid://bkr5nqrgfbf2w" path="res://scenes/enemies/copter.tscn" id="2_3uffu"]
-[ext_resource type="Script" path="res://scripts/attack_waves/path_follow_with_offset.gd" id="3_ey1no"]
+[ext_resource type="Script" uid="uid://g7beatrd0xr3" path="res://scripts/attack_waves/path_follow_with_offset.gd" id="3_ey1no"]
 [ext_resource type="PackedScene" uid="uid://dkg7gcrs3s7jc" path="res://scenes/enemies/bird.tscn" id="4_3pwnp"]
 
 [sub_resource type="Curve2D" id="Curve2D_s13m3"]

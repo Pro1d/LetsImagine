@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="WeaponSpec" load_steps=3 format=3 uid="uid://p5p3rlli25ko"]
 
 [ext_resource type="ArrayMesh" uid="uid://duxafbryoqm3m" path="res://assets/models/all/Lego.res" id="1_biw56"]
-[ext_resource type="Script" path="res://scripts/weapon_spec.gd" id="1_fmksk"]
+[ext_resource type="Script" uid="uid://8ky1ixwpj3oo" path="res://scripts/weapon_spec.gd" id="1_fmksk"]
 
 [resource]
 script = ExtResource("1_fmksk")
@@ -19,3 +19,4 @@ seeking = false
 proj_shape = 1
 proj_color = Color(0.56, 0.868, 1, 1)
 mesh = ExtResource("1_biw56")
+bonus_bouncing = 0

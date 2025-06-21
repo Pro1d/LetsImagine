@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="WeaponSpec" load_steps=3 format=3 uid="uid://0a6c26hv0xqb"]
 
-[ext_resource type="Script" path="res://scripts/weapon_spec.gd" id="1_bcthl"]
+[ext_resource type="Script" uid="uid://8ky1ixwpj3oo" path="res://scripts/weapon_spec.gd" id="1_bcthl"]
 [ext_resource type="ArrayMesh" uid="uid://itvw88q41qwc" path="res://assets/models/all/Pen.res" id="1_fe7r6"]
 
 [resource]
@@ -19,3 +19,4 @@ seeking = false
 proj_shape = 2
 proj_color = Color(0.767667, 0.66, 1, 1)
 mesh = ExtResource("1_fe7r6")
+bonus_bouncing = 0

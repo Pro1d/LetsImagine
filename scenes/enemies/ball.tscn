@@ -37,8 +37,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_o84jy"]
 _data = {
-"RESET": SubResource("Animation_wwiom"),
-"flying": SubResource("Animation_8ubt0")
+&"RESET": SubResource("Animation_wwiom"),
+&"flying": SubResource("Animation_8ubt0")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kw34t"]

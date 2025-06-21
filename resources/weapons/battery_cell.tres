@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="WeaponSpec" load_steps=3 format=3 uid="uid://dpeghur16lt46"]
 
 [ext_resource type="ArrayMesh" uid="uid://chdm1jrvmhder" path="res://assets/models/all/BatteryCell.res" id="1_0tbmf"]
-[ext_resource type="Script" path="res://scripts/weapon_spec.gd" id="1_ngfcq"]
+[ext_resource type="Script" uid="uid://8ky1ixwpj3oo" path="res://scripts/weapon_spec.gd" id="1_ngfcq"]
 
 [resource]
 script = ExtResource("1_ngfcq")
@@ -19,3 +19,4 @@ seeking = false
 proj_shape = 1
 proj_color = Color(1, 0.78, 0.6, 1)
 mesh = ExtResource("1_0tbmf")
+bonus_bouncing = 0

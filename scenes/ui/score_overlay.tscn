@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://y1ajs3pqfl4p"]
 
-[ext_resource type="Script" path="res://scripts/ui/score_overlay.gd" id="1_ck6f8"]
+[ext_resource type="Script" uid="uid://d1kqisfba108c" path="res://scripts/ui/score_overlay.gd" id="1_ck6f8"]
 [ext_resource type="LabelSettings" uid="uid://cpdhvt73q0p3u" path="res://resources/themes/border_label.tres" id="2_44l1k"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ogutn"]

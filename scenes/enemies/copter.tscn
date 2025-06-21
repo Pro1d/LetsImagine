@@ -69,8 +69,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mktsu"]
 _data = {
-"RESET": SubResource("Animation_a6h35"),
-"flying": SubResource("Animation_1roxy")
+&"RESET": SubResource("Animation_a6h35"),
+&"flying": SubResource("Animation_1roxy")
 }
 
 [node name="Copter" instance=ExtResource("1_xeiv4")]

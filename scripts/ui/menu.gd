@@ -3,7 +3,6 @@ extends Control
 
 signal play_clicked
 
-var _link := "https://www.discover.games/"
 var plane_index := 0
 
 @onready var display_xp := Config.xp
@@ -13,13 +12,11 @@ func _ready() -> void:
 	_display_level_progression(display_xp)
 	_display_plane()
 	
-	(%VisitButton as Button).pressed.connect(_on_link_pressed)
 	(%PrevPlaneButton as Button).pressed.connect(_on_change_plane_pressed.bind(-1))
 	(%NextPlaneButton as Button).pressed.connect(_on_change_plane_pressed.bind(+1))
 	(%PlayButton as Button).pressed.connect(play_clicked.emit)
 	WhalepassSingleton.progress_updated.connect(_on_progress_updated)
 	WhalepassSingleton.inventory_updated.connect(_on_inventory_updated)
-	WhalepassSingleton.link_received.connect(_on_link_received)
 	
 	visibility_changed.connect(func() -> void:
 		if visible: WhalepassSingleton.trigger_update()
@@ -33,9 +30,6 @@ func _on_progress_updated() -> void:
 	tween_xp.tween_method(_display_level_progression, display_xp, Config.xp, 2.0) \
 		.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
 
-func _on_link_received() -> void:
-	_link = WhalepassSingleton.get_redirect_link()
-
 func _on_inventory_updated() -> void:
 	_display_plane()
 
@@ -46,9 +40,6 @@ func _display_level_progression(xp: int) -> void:
 	(%XpLabel as Label).text = "Next Level: %d/%d exp" % [e.xp, e.xp_next_level]
 	(%XpProgressBar as ProgressBar).value = e.xp
 	(%XpProgressBar as ProgressBar).max_value = e.xp_next_level
-
-func _on_link_pressed() -> void:
-	OS.shell_open(_link)
 
 func _on_change_plane_pressed(i: int) -> void:
 	var planes_count := Config.available_planes.size()

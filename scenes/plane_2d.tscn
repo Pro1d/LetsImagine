@@ -8,11 +8,11 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w2wh5"]
 radius = 18.0
-height = 206.0
+height = 172.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dw86g"]
 radius = 17.0
-height = 148.0
+height = 126.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6fxer"]
 radius = 120.0
@@ -232,7 +232,7 @@ round_precision = 4
 [node name="ShieldAnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D/ShieldShape"]
 unique_name_in_owner = true
 libraries = {
-"": SubResource("AnimationLibrary_m7d3t")
+&"": SubResource("AnimationLibrary_m7d3t")
 }
 speed_scale = 0.2
 
@@ -274,9 +274,9 @@ color_ramp = SubResource("Gradient_ibcmv")
 unique_name_in_owner = true
 position = Vector2(-15, 0)
 amount = 2
+texture = ExtResource("3_44k8h")
 lifetime = 0.35
 randomness = 0.5
-texture = ExtResource("3_44k8h")
 emission_shape = 2
 emission_sphere_radius = 100.0
 gravity = Vector2(0, 0)

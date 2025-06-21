@@ -16,19 +16,19 @@ curve = SubResource("Curve2D_jdpeg")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="FromBackPath/FromBackPathFollow2D/Circle" index="0"]
 position = Vector2(864, 224)
-rotation = -0.614403
+rotation = -0.614402
 
 [node name="Bird" parent="FromBackPath/FromBackPathFollow2D/Circle/PathFollow2D" index="0" instance=ExtResource("2_7emqh")]
 
 [node name="PathFollow2D2" type="PathFollow2D" parent="FromBackPath/FromBackPathFollow2D/Circle" index="1"]
-position = Vector2(1009.87, 276.768)
-rotation = 1.28899
+position = Vector2(1009.87, 276.767)
+rotation = 1.28898
 progress = 195.466
 
 [node name="Bird" parent="FromBackPath/FromBackPathFollow2D/Circle/PathFollow2D2" index="0" instance=ExtResource("2_7emqh")]
 
 [node name="PathFollow2D3" type="PathFollow2D" parent="FromBackPath/FromBackPathFollow2D/Circle" index="2"]
-position = Vector2(1011.35, 469.821)
+position = Vector2(1011.35, 469.822)
 rotation = 1.83771
 progress = 390.933
 
@@ -42,7 +42,7 @@ progress = 586.399
 [node name="Bird" parent="FromBackPath/FromBackPathFollow2D/Circle/PathFollow2D4" index="0" instance=ExtResource("2_7emqh")]
 
 [node name="PathFollow2D5" type="PathFollow2D" parent="FromBackPath/FromBackPathFollow2D/Circle" index="4"]
-position = Vector2(791.726, 400.638)
+position = Vector2(791.726, 400.637)
 rotation = -1.67806
 progress = 781.866
 

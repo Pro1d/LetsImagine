@@ -10,6 +10,7 @@ var initialized := false
 func _enter_tree() -> void:
 	process_physics_priority = -100
 	process_priority = 100
+	visible = false
 
 #func _ready() -> void:
 	#var p3d := _target_3d.get_parent()
@@ -22,6 +23,7 @@ func _physics_process(_delta: float) -> void:
 func _process(_delta: float) -> void:
 	if not initialized:
 		force_update()
+		visible = true
 		initialized = true
 
 func force_update() -> void:

@@ -40,6 +40,7 @@ var invunerability := false
 @onready var _hit_box_area := %HitBoxArea as Area2D
 @onready var shield_shape := %ShieldShape as CollisionShape2D
 @onready var death_particles := %DeathCPUParticles2D as CPUParticles2D
+@onready var damaged_particles := %DamagedCPUParticles2D as CPUParticles2D
 var _destroy_tween : Tween
 
 var equipped_weapons : Array[Weapon] = []
@@ -81,7 +82,8 @@ func _project_position_3d(t2d: Transform2D) -> void:
 	_root_3d.global_rotation.x = signf(t2d.origin.y - half_h) * absf((t2d.origin.y - half_h) / half_h) ** 1.5 * deg_to_rad(-40.0)
 
 func reset() -> void:
-	(%DamagedCPUParticles2D as CPUParticles2D).restart()
+	damaged_particles.restart()
+	damaged_particles.emitting = false
 	_stop_destroy_fx()
 	hitpoint = max_hitpoint
 	for i in range(equipped_weapons.size()):
@@ -186,8 +188,7 @@ func _update_shield() -> void:
 	shield_shape.set_deferred("disabled", not _shielded)
 
 func _update_damaged_fx() -> void:
-	var p := %DamagedCPUParticles2D as CPUParticles2D
-	p.emitting = (hitpoint <= 1)
+	damaged_particles.emitting = (hitpoint <= 1)
 	
 func _on_hit_box_entered(body: PhysicsBody2D) -> void:
 	#var proj := body as Projectile

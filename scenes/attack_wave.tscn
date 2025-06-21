@@ -112,8 +112,7 @@ curve = SubResource("Curve2D_d1hhl")
 
 [node name="FromBackPathFollow2D" type="PathFollow2D" parent="FromBackPath"]
 unique_name_in_owner = true
-position = Vector2(6.10352e-05, 0)
-progress = 700.0
+position = Vector2(700, 0)
 rotates = false
 loop = false
 
